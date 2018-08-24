@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>
+		<div>
+			hallo html 
+			<script type="text/javascript">
+				//3. document write
+				document.write("javascrit text");
+			</script>
+			<a href="#" id="btn">change</a>
+			<div id="output">language</div>
+			<hr/>
+			<div id="myform">
+				username : <input type="text" id="username" /><br/>
+				password : <input type="text" id="password" /><br/>
+				<input type="submit" id="btn-submit" />
+			</div>
+			<div id="output-object">
+				name : <span id="output-username"></span>
+				password : <span id="output-password"></span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="myjs.js"></script>
+	<script type="text/javascript">
+		//do for jquery
+		$(document).ready(function(){
+			//alert('jquery worked');
+			$('#btn-submit').click(function(){
+				var name = $('#username').val();
+				var pass = $('#password').val();
+				
+				//move
+				$('#output-username').text(name);
+				$('#output-password').text(pass);
+			});
+		});
+	</script>
+	
+</html>
